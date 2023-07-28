@@ -1,0 +1,53 @@
+---
+import type { MarkdownInstance, Page } from 'astro';
+
+import PostGallery from '@/partials/PostGallery';
+import Base from '@/templates/Base.astro';
+import { AppConfig } from '@/utils/AppConfig';
+import { sortByDate } from '@/utils/Posts';
+
+interface IFrontmatter {
+  title: string;
+  description: string;
+  pubDate: string;
+  imgSrc: string;
+  imgAlt: string;
+}
+
+// Overrides `GetStaticPathsOptions` types from Astro
+type GetStaticPaths = {
+  paginate: any;
+};
+
+export async function getStaticPaths({ paginate }: GetStaticPaths) {
+  const allPosts = await Astro.glob<IFrontmatter>('./*.md');
+  const sortedPosts = sortByDate(allPosts);
+
+  // Return a paginated collection of paths for all posts
+  return paginate(sortedPosts, { pageSize: 6 });
+}
+
+type FrontmatterPage = Page<MarkdownInstance<IFrontmatter>>;
+
+interface Props {
+  page: FrontmatterPage;
+}
+
+const { page } = Astro.props as Props;
+const titleSuffix = ` - ${AppConfig.site_name}`;
+const titleBase = `Blog page ${page.currentPage}`;
+const title = titleBase + titleSuffix;
+const description =
+  'Pagination example built with Astro styled with Tailwind CSS.';
+---
+
+<Base head={{ title, description }}>
+  <div class='flex flex-col items-center justify-center gap-8 pt-10'>
+    <div class='flex flex-col items-center justify-center gap-8'>
+      <div class='text-5xl font-bold'>All</div>
+      <div class='text-sm'>All of my blog/project posts.</div>
+    </div>
+
+    <PostGallery postList={page.data} />
+  </div>
+</Base>
