@@ -6,13 +6,7 @@ import Base from '@/templates/Base.astro';
 import { AppConfig } from '@/utils/AppConfig';
 import { sortByDate } from '@/utils/Posts';
 
-interface IFrontmatter {
-  title: string;
-  description: string;
-  pubDate: string;
-  imgSrc: string;
-  imgAlt: string;
-}
+import type { IFrontmatter } from '../../types/types';
 
 // Overrides `GetStaticPathsOptions` types from Astro
 type GetStaticPaths = {
@@ -47,6 +41,6 @@ const description = 'None for now';
       <div class='text-sm'>All of my project posts.</div>
     </div>
 
-    <PostGallery postList={page.data} />
+    <PostGallery postList={page.data ? page.data : []} />
   </div>
 </Base>

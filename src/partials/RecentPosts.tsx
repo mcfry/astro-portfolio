@@ -1,14 +1,7 @@
 import type { MarkdownInstance } from 'astro';
 
+import type { IFrontmatter } from '../types/types';
 import PostGallery from './PostGallery';
-
-interface IFrontmatter {
-  title: string;
-  description: string;
-  pubDate: string;
-  imgSrc: string;
-  imgAlt: string;
-}
 
 type IRecentPostsProps = {
   postList: MarkdownInstance<IFrontmatter>[];

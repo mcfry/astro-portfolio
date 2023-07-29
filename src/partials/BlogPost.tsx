@@ -2,13 +2,7 @@ import type { ReactNode } from 'react';
 
 import { AppConfig } from '@/utils/AppConfig';
 
-interface IFrontmatter {
-  title: string;
-  description: string;
-  pubDate: string;
-  imgSrc: string;
-  imgAlt: string;
-}
+import type { IFrontmatter } from '../types/types';
 
 type IBlogPostProps = {
   frontmatter: IFrontmatter;

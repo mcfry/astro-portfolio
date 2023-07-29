@@ -1,12 +1,6 @@
 import type { MarkdownInstance } from 'astro';
 
-interface IFrontmatter {
-  title: string;
-  description: string;
-  pubDate: string;
-  imgSrc: string;
-  imgAlt: string;
-}
+import type { IFrontmatter } from '../types/types';
 
 type IRecentPostsProps = {
   postList: MarkdownInstance<IFrontmatter>[];
@@ -15,8 +9,12 @@ type IRecentPostsProps = {
 const PostGallery = ({ postList }: IRecentPostsProps) => {
   return (
     <div className="flex w-6/12 space-x-4 pb-10">
-      {postList.map((post) => (
-        <a className="z-20 w-[33%] hover:translate-y-1" href={post.url}>
+      {postList.map((post, index) => (
+        <a
+          key={`${post.frontmatter.title}_${index.toString}`}
+          className="z-20 w-[33%] hover:translate-y-1"
+          href={post.url}
+        >
           <div key={post.frontmatter.pubDate} className="card glass w-full">
             <div className="aspect-h-2 aspect-w-3">
               <img
