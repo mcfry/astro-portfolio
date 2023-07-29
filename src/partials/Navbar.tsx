@@ -1,9 +1,9 @@
 const Navbar = () => {
   const pages = [
-    {
-      text: 'Blog',
-      link: '/blog/',
-    },
+    // {
+    //   text: 'Blog',
+    //   link: '/blog/',
+    // },
     {
       text: 'Projects',
       link: '/projects/',

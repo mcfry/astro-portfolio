@@ -1,1 +1,1 @@
-Portfolio with Astro, Tailwind, React
+Portfolio with Astro, React, Typescript, Tailwind, Husky

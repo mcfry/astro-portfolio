@@ -47,15 +47,15 @@ const PostHeader = ({
 
 const PostContent = ({ content, children }: IPostContent) => {
   return (
-    <div className="flex flex-col items-center">
+    <div className="z-20 flex flex-col items-center">
       <div className="w-4/12">
         <img
-          className="z-20 rounded-md"
+          className="z-20 rounded-md border border-gray-800 drop-shadow-xl"
           src={content.imgSrc}
           alt={content.imgAlt}
         />
       </div>
-      <div className="prose !prose-invert my-8 flex max-w-[50%] flex-col leading-snug">
+      <div className="prose !prose-invert z-20 my-8 flex max-w-[50%] flex-col leading-snug">
         {children}
       </div>
     </div>
@@ -63,7 +63,7 @@ const PostContent = ({ content, children }: IPostContent) => {
 };
 
 const BlogPost = (props: IBlogPostProps) => (
-  <div className="flex flex-col items-center justify-center pt-10">
+  <div className="flex flex-col items-center justify-center pb-20 pt-10">
     <PostHeader content={props.frontmatter} author={AppConfig.author} />
 
     <PostContent content={props.frontmatter}>{props.children}</PostContent>

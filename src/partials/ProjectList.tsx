@@ -14,7 +14,9 @@ const ProjectList = () => {
       description:
         "Stylish mocker for the NFL Draft. Designed as a free alternative to PFF's 'Mock Draft Simulator'.",
       isNew: true,
-      link: '/mdm-maker/',
+      link: '/projects/mdm-maker/',
+      imgSrc: '/assets/images/default-project.png',
+      imgAlt: 'MDM image',
     },
     {
       name: 'Mog Up',
@@ -30,10 +32,12 @@ const ProjectList = () => {
       description:
         'A transmog management and sharing app that features a live 3D model viewer. Supports selecting items manually or using a BetterTransmog output string.',
       isNew: true,
-      link: '/mdm-maker/',
+      link: '/projects/mog-up/',
+      imgSrc: '/assets/images/default-project.png',
+      imgAlt: 'Mog Up image',
     },
     {
-      name: "Brian's Portfolio",
+      name: 'Astrofolio',
       techStack: [
         ['Astro.js', 'bg-violet-500'],
         ['React (CRA)', 'bg-cyan-500'],
@@ -42,14 +46,16 @@ const ProjectList = () => {
         ['Husky', 'bg-orange-800'],
         ['Netlify', 'bg-emerald-500'],
       ],
-      description: 'This portfolio, which is built with Astro!',
+      description: 'This portfolio, which is built with Astro (and more)!',
       isNew: true,
-      link: '/mdm-maker/',
+      link: '/projects/astrofolio/',
+      imgSrc: '/assets/images/astrofolio_screen1.png',
+      imgAlt: 'Astro image',
     },
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center pb-20">
       <span className="w-6/12 p-2 text-3xl font-bold">
         Recent{' '}
         <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -68,9 +74,9 @@ const ProjectList = () => {
                   <div className="card glass card-side h-48 w-full shadow-xl">
                     <figure>
                       <img
-                        className="h-40 w-40 p-4"
-                        src="/assets/images/default-project.png"
-                        alt="Project web design"
+                        className="h-40 w-40 object-scale-down p-4"
+                        src={project.imgSrc}
+                        alt={project.imgAlt}
                       />
                     </figure>
                     <div className="card-body">
