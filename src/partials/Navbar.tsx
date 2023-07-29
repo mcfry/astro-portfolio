@@ -12,6 +12,10 @@ const Navbar = () => {
       text: 'About',
       link: '/about/',
     },
+    {
+      text: 'Contact Me',
+      link: '/contact_me/',
+    },
   ];
 
   return (
