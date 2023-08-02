@@ -15,7 +15,7 @@ const ProjectList = () => {
         "Stylish mocker for the NFL Draft. Designed as a free alternative to PFF's 'Mock Draft Simulator'.",
       isNew: true,
       link: '/projects/mdm-maker/',
-      imgSrc: '/assets/images/default-project.png',
+      imgSrc: '/assets/images/mdm_screen1.png',
       imgAlt: 'MDM image',
     },
     {
@@ -33,24 +33,41 @@ const ProjectList = () => {
         'A transmog management and sharing app that features a live 3D model viewer. Supports selecting items manually or using a BetterTransmog output string.',
       isNew: true,
       link: '/projects/mog-up/',
-      imgSrc: '/assets/images/default-project.png',
+      imgSrc: 'https://i.imgur.com/lu4LXfw.png',
       imgAlt: 'Mog Up image',
     },
     {
       name: 'Astrofolio',
       techStack: [
         ['Astro.js', 'bg-violet-500'],
-        ['React (CRA)', 'bg-cyan-500'],
+        ['React', 'bg-cyan-500'],
         ['Typescript', 'bg-blue-500'],
         ['Tailwind', 'bg-purple-500'],
         ['Husky', 'bg-orange-800'],
         ['Netlify', 'bg-emerald-500'],
       ],
-      description: 'This portfolio, which is built with Astro (and more)!',
+      description: 'This portfolio, which is built with Astro!',
       isNew: true,
       link: '/projects/astrofolio/',
       imgSrc: '/assets/images/astrofolio_screen1.png',
       imgAlt: 'Astro image',
+    },
+    {
+      name: 'RsGet',
+      techStack: [
+        ['Electron', 'bg-cyan-500'],
+        ['React', 'bg-cyan-500'],
+        ['Redux', 'bg-purple-500'],
+        ['Flow', 'bg-orange-500'],
+        ['MaterialUI', 'bg-blue-500'],
+        ['Webpack', 'bg-cyan-500'],
+      ],
+      description:
+        'An application for viewing, filtering, and analyzing live information from the RS economy.',
+      isNew: false,
+      link: '/projects/rsget/',
+      imgSrc: 'https://i.imgur.com/G3w6ayc.png',
+      imgAlt: 'RsGet image',
     },
   ];
 
@@ -68,10 +85,12 @@ const ProjectList = () => {
             <div key={project.name} className="block">
               <a href={project.link}>
                 <div className="indicator w-full">
-                  <span className="badge indicator-item badge-primary rounded-none">
-                    new
-                  </span>
-                  <div className="card glass card-side h-48 w-full shadow-xl">
+                  {project.isNew && (
+                    <span className="badge indicator-item badge-primary rounded-none">
+                      new
+                    </span>
+                  )}
+                  <div className="card glass card-side h-48 w-full rounded-md shadow-xl">
                     <figure>
                       <img
                         className="h-40 w-40 object-scale-down p-4"

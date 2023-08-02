@@ -19,44 +19,46 @@ const Hero = () => (
             I'm a Full-stack Web Developer with experience in:
           </p>
           <ul className="ml-4 inline-flex list-disc space-x-6 marker:text-white">
-            <li>React,</li>
-            <li>Ruby on Rails,</li>
-            <li>Python,</li>
-            <li>GraphQL,</li>
+            <li>React</li>
+            <li>Ruby on Rails</li>
+            <li>Python</li>
+            <li>GraphQL</li>
             <li>Express</li>
           </ul>
           <br />
           <ul className="ml-4 inline-flex list-disc space-x-6 marker:text-white">
-            <li>MySQL,</li>
-            <li>PostgreSQL,</li>
-            <li>NoSQL (MongoDB),</li>
-            <li>Typescript,</li>
+            <li>MySQL</li>
+            <li>PostgreSQL</li>
+            <li>NoSQL (MongoDB)</li>
+            <li>Typescript</li>
             <li>MobX</li>
           </ul>
           <br />
           <ul className="ml-4 inline-flex list-disc space-x-6 marker:text-white">
-            <li>Redux,</li>
-            <li>Zustand,</li>
-            <li>CSS/SCSS,</li>
+            <li>Redux</li>
+            <li>Zustand</li>
+            <li>CSS/SCSS</li>
             <li>HTML</li>
           </ul>
         </p>
         <p className="py-3">
           <p className="font-semibold">I've also worked with:</p>
           <ul className="ml-4 inline-flex list-disc space-x-6 marker:text-white">
-            <li>Django,</li>
-            <li>Flask,</li>
-            <li>jQuery,</li>
-            <li>Firebase,</li>
+            <li>Django</li>
+            <li>Flask</li>
+            <li>jQuery</li>
+            <li>Firebase</li>
             <li>AWS</li>
+            <li>Electron</li>
           </ul>
           <br />
           <ul className="ml-4 inline-flex list-disc space-x-6 marker:text-white">
-            <li>D3.js,</li>
-            <li>Flow.js,</li>
-            <li>AngularJS 1.0,</li>
-            <li>C/C++,</li>
+            <li>D3.js</li>
+            <li>Flow.js</li>
+            <li>AngularJS 1.0</li>
+            <li>C/C++</li>
             <li>Java</li>
+            <li>And more!</li>
           </ul>
         </p>
         <div className="z-20 mt-4 flex items-center">

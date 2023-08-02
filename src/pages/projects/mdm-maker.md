@@ -3,7 +3,7 @@ layout: '@/templates/BasePost.astro'
 title: Mock Draft Maker
 description: Stylish mocker for the NFL. Designed as a free alternative to PFF's 'Mock Draft Simulator'. 
 pubDate: 2023-07-20T00:00:00Z
-imgSrc: '/assets/images/mdm_screen1.png'
+imgSrc: 'https://i.imgur.com/Yh5ce5r.gif'
 imgAlt: 'Image post 2'
 ---
 

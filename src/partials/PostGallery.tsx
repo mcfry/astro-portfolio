@@ -23,7 +23,7 @@ const PostGallery = ({ postList }: IRecentPostsProps) => {
                 alt={post.frontmatter.imgAlt}
               />
             </div>
-            <div className="card-body h-56">
+            <div className="card-body h-80">
               <h2 className="card-title bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 {post.frontmatter.title}
               </h2>
