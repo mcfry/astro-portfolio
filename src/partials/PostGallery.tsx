@@ -8,7 +8,7 @@ type IRecentPostsProps = {
 
 const PostGallery = ({ postList }: IRecentPostsProps) => {
   return (
-    <div className="flex w-6/12 space-x-4 pb-10">
+    <section className="flex w-6/12 space-x-4 pb-10">
       {postList.map((post, index) => (
         <a
           key={`${post.frontmatter.title}_${index.toString}`}
@@ -32,7 +32,7 @@ const PostGallery = ({ postList }: IRecentPostsProps) => {
           </div>
         </a>
       ))}
-    </div>
+    </section>
   );
 };
 

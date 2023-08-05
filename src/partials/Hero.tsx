@@ -1,5 +1,5 @@
 const Hero = () => (
-  <div className="flex w-full flex-col items-center justify-center">
+  <section className="flex w-full flex-col items-center justify-center">
     <div className="hero-content w-full flex-col lg:flex-row-reverse lg:justify-around">
       <img
         className="h-[24rem] w-[24rem]"
@@ -72,7 +72,7 @@ const Hero = () => (
         </div>
       </div>
     </div>
-  </div>
+  </section>
 );
 
 export { Hero };

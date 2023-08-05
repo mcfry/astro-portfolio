@@ -7,7 +7,7 @@ imgSrc: 'https://i.imgur.com/Yh5ce5r.gif'
 imgAlt: 'Image post 2'
 ---
 
-Made with Rails 7, React, PostgresQL, Zustand, Tailwind, and DaisyUI.
+Made with Rails 7, React, PostgresQL, Zustand, Tailwind, DaisyUI, and Jest.
 
 Packaged with ESBuild.
 

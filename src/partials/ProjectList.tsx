@@ -8,6 +8,7 @@ const ProjectList = () => {
         ['Ruby on Rails 7', 'bg-red-500'],
         ['PostgreSQL', 'bg-blue-500'],
         ['Tailwind + DaisyUI', 'bg-purple-500'],
+        ['Jest', 'bg-rose-800'],
         ['ESBuild', 'bg-yellow-500'],
         ['Render', 'bg-emerald-500'],
       ],
@@ -23,10 +24,12 @@ const ProjectList = () => {
       techStack: [
         ['React (CRA)', 'bg-cyan-500'],
         ['GraphQL', 'bg-pink-500'],
-        ['Tailwind + DaisyUI', 'bg-purple-500'],
         ['Apollo', 'bg-fuchsia-500'],
-        ['Render', 'bg-rose-500'],
-        ['Amazon S3', 'bg-rose-500'],
+        ['Tailwind + DaisyUI', 'bg-purple-500'],
+        ['Firebase', 'bg-rose-500'],
+        ['S3', 'bg-rose-500'],
+        ['Sequelize ORM', 'bg-blue-500'],
+        ['PostgreSQL', 'bg-blue-500'],
         ['Render', 'bg-emerald-500'],
       ],
       description:
@@ -81,7 +84,7 @@ const ProjectList = () => {
         ['Bootstrap', 'bg-purple-500'],
       ],
       description:
-        'An application to guide and assist the task of memorizing a deck of cards.',
+        'An application to guide and assist the task of memorizing a deck of cards using the PAO mnemonic system.',
       isNew: false,
       link: '/projects/card_memory/',
       imgSrc: 'https://i.imgur.com/U6Yzbub.gif',
@@ -90,7 +93,7 @@ const ProjectList = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center pb-20">
+    <section className="flex flex-col items-center justify-center pb-20">
       <span className="w-6/12 p-2 text-3xl font-bold">
         Recent{' '}
         <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -117,7 +120,7 @@ const ProjectList = () => {
                       />
                     </figure>
                     <div className="card-body">
-                      <span>
+                      <span className="w-[40rem]">
                         <h2 className="card-title mb-1 hover:text-cyan-400">
                           {project.name}
                         </h2>
@@ -141,7 +144,7 @@ const ProjectList = () => {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 };
 

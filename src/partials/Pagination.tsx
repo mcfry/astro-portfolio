@@ -18,9 +18,14 @@ const Pagination = ({ currentPage, url }: PaginationProps) => {
             «
           </a>
         )}
-        <a className="btn join-item">Page {currentPage}</a>
+        <a className="btn join-item bg-slate-700 text-white hover:bg-cyan-600 hover:text-slate-800">
+          Page {currentPage}
+        </a>
         {url.next && (
-          <a href={url.next} className="btn join-item">
+          <a
+            href={url.next}
+            className="btn join-item bg-slate-700 text-white hover:bg-cyan-600 hover:text-slate-800"
+          >
             »
           </a>
         )}

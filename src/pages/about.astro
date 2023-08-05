@@ -7,8 +7,15 @@ const { description } = AppConfig;
 ---
 
 <Base head={{ title, description }}>
-  <div class='flex flex-col items-center justify-center p-20'>
-    <p class='py-6'>
+  <section class='flex flex-col items-center justify-center p-20'>
+    <div class='flex flex-col justify-center items-center py-6'>
+      <p class="font-semibold">Education, Pennsylvania State University:</p>
+      <ul class="marker:text-white list-disc space-x-6">
+        <li>B.S. in Computer Science & Minor in Mathematics</li>
+      </ul>
+    </div>
+
+    <div class='flex flex-col justify-center items-center py-6'>
       <p class="font-semibold">I'm a Full-stack Web Developer with experience in:</p>
       <ul class="marker:text-white inline-flex list-disc space-x-6">
         <li>React</li>
@@ -29,8 +36,9 @@ const { description } = AppConfig;
         <li>CSS/SCSS</li>
         <li>HTML</li>
       </ul>
-    </p>
-    <p class="py-6">
+    </div>
+
+    <div class="flex flex-col justify-center items-center py-6">
       <p class="font-semibold">I've also worked with:</p>
       <ul class="marker:text-white inline-flex list-disc space-x-6">
         <li>Django</li>
@@ -45,12 +53,13 @@ const { description } = AppConfig;
         <li>Java</li>
         <li>And more!</li>
       </ul>
-    </p>
+    </div>
+
     <div class='z-20 flex items-center pt-10'>
       <img class='h-10 w-10' src='/assets/images/icons8-github-512.png' />
       <div class='pl-1 font-semibold hover:text-fuchsia-500'>
         <a href='https://github.com/mcfry'>Mcfry</a>
       </div>
     </div>
-  </div>
+  </section>
 </Base>
