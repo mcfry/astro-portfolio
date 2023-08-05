@@ -69,6 +69,24 @@ const ProjectList = () => {
       imgSrc: 'https://i.imgur.com/G3w6ayc.png',
       imgAlt: 'RsGet image',
     },
+    {
+      name: 'Card Memory',
+      techStack: [
+        ['Rails (api)', 'bg-red-500'],
+        ['PostgreSQL', 'bg-blue-500'],
+        ['Devise (users)', 'bg-fuchsia-500'],
+        ['React', 'bg-cyan-500'],
+        ['MobX', 'bg-orange-500'],
+        ['Three.js (panorama)', 'bg-black'],
+        ['Bootstrap', 'bg-purple-500'],
+      ],
+      description:
+        'An application to guide and assist the task of memorizing a deck of cards.',
+      isNew: false,
+      link: '/projects/card_memory/',
+      imgSrc: 'https://i.imgur.com/U6Yzbub.gif',
+      imgAlt: 'Card Memory image',
+    },
   ];
 
   return (

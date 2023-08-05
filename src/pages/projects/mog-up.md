@@ -3,7 +3,7 @@ layout: '@/templates/BasePost.astro'
 title: Mog Up
 description: A transmog management and sharing app that features a live 3D model viewer. Supports selecting items manually or using BetterTransmog output strings.
 pubDate: 2023-05-01T00:00:00Z
-imgSrc: '/assets/images/mogup.gif'
+imgSrc: 'https://i.imgur.com/rHL52cI.gif'
 imgAlt: 'Mog Up gif'
 ---
 

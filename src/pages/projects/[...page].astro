@@ -2,6 +2,7 @@
 import type { MarkdownInstance, Page } from 'astro';
 
 import PostGallery from '@/partials/PostGallery';
+import Pagination from '@/partials/Pagination';
 import Base from '@/templates/Base.astro';
 import { AppConfig } from '@/utils/AppConfig';
 import { sortByDate } from '@/utils/Posts';
@@ -18,7 +19,7 @@ export async function getStaticPaths({ paginate }: GetStaticPaths) {
   const sortedProjects = sortByDate(allProjects);
 
   // Return a paginated collection of paths for all projects
-  return paginate(sortedProjects, { pageSize: 6 });
+  return paginate(sortedProjects, { pageSize: 3 });
 }
 
 type FrontmatterPage = Page<MarkdownInstance<IFrontmatter>>;
@@ -29,9 +30,10 @@ interface Props {
 
 const { page } = Astro.props as Props;
 const titleSuffix = ` - ${AppConfig.site_name}`;
-const titleBase = `Projects page ${page.currentPage}`;
+const titleBase = `Projects Page ${page.currentPage}`;
 const title = titleBase + titleSuffix;
-const description = 'None for now';
+const description = 'My projects';
+
 ---
 
 <Base head={{ title, description }}>
@@ -42,5 +44,6 @@ const description = 'None for now';
     </div>
 
     <PostGallery postList={page.data ? page.data : []} />
+    <Pagination currentPage={page.currentPage} url={page.url} />
   </div>
 </Base>
