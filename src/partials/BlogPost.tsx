@@ -42,14 +42,14 @@ const PostHeader = ({
 const PostContent = ({ content, children }: IPostContent) => {
   return (
     <article className="z-20 flex flex-col items-center">
-      <div className="w-6/12">
+      <div className="w-9/12 sm:w-8/12 md:w-7/12 lg:w-6/12 2xl:w-5/12">
         <img
           className="z-20 rounded-md border border-gray-800 drop-shadow-xl"
           src={content.imgSrc}
           alt={content.imgAlt}
         />
       </div>
-      <div className="prose !prose-invert z-20 my-8 flex max-w-[50%] flex-col leading-snug">
+      <div className="prose !prose-invert z-20 my-12 flex w-10/12 max-w-5xl flex-col leading-snug sm:w-9/12 md:w-8/12 lg:w-7/12 2xl:w-6/12 2xl:max-w-[50%]">
         {children}
       </div>
     </article>

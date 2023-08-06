@@ -1,3 +1,5 @@
+import TechStack from './TechStack';
+
 const Hero = () => (
   <section className="flex w-full flex-col items-center justify-center">
     <div className="hero-content w-full flex-col lg:flex-row-reverse lg:justify-around">
@@ -7,59 +9,60 @@ const Hero = () => (
         alt="Avatar image"
         loading="lazy"
       />
-      <div className="pl-8">
-        <h1 className="text-5xl font-bold">
+      <div className="flex w-full flex-col items-center md:w-fit md:pl-8 lg:block">
+        <h1 className="text-center text-5xl font-bold">
           Hi there, I'm{' '}
           <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
             Brian 👋
           </span>{' '}
         </h1>{' '}
-        <p className="w-[28rem] py-3 leading-snug">
-          <p className="font-semibold">
+        <p className="py-3 leading-snug">
+          <p className="text-center font-semibold lg:text-left">
             I'm a Full-stack Web Developer with experience in:
           </p>
-          <ul className="ml-4 inline-flex list-disc space-x-6 marker:text-white">
-            <li>React</li>
-            <li>Ruby on Rails</li>
-            <li>Python</li>
-            <li>GraphQL</li>
-            <li>Express</li>
-          </ul>
-          <br />
-          <ul className="ml-4 inline-flex list-disc space-x-6 marker:text-white">
-            <li>MySQL</li>
-            <li>PostgreSQL</li>
-            <li>NoSQL (MongoDB)</li>
-            <li>Typescript</li>
-            <li>MobX</li>
-          </ul>
-          <br />
-          <ul className="ml-4 inline-flex list-disc space-x-6 marker:text-white">
-            <li>Redux</li>
-            <li>Zustand</li>
-            <li>CSS/SCSS</li>
-            <li>HTML</li>
-          </ul>
+          <TechStack
+            techStack={[
+              'React',
+              'Ruby on Rails',
+              'Python',
+              'GraphQL',
+              'Express',
+              'MySQL',
+              'PostgreSQL',
+              'NoSQL',
+              'Typescript',
+              'MobX',
+              'Redux',
+              'Zustand',
+              'CSS/SCSS',
+              'HTML',
+            ]}
+            size={5}
+            breakpoint="lg"
+          />
         </p>
         <p className="py-3">
-          <p className="font-semibold">I've also worked with:</p>
-          <ul className="ml-4 inline-flex list-disc space-x-6 marker:text-white">
-            <li>Django</li>
-            <li>Flask</li>
-            <li>jQuery</li>
-            <li>Firebase</li>
-            <li>AWS</li>
-            <li>Electron</li>
-          </ul>
-          <br />
-          <ul className="ml-4 inline-flex list-disc space-x-6 marker:text-white">
-            <li>D3.js</li>
-            <li>Flow.js</li>
-            <li>AngularJS 1.0</li>
-            <li>C/C++</li>
-            <li>Java</li>
-            <li>And more!</li>
-          </ul>
+          <p className="text-center font-semibold lg:text-left">
+            I've also worked with:
+          </p>
+          <TechStack
+            techStack={[
+              'Django',
+              'Flask',
+              'jQuery',
+              'Firebase',
+              'AWS',
+              'Electron',
+              'D3.js',
+              'Flow.js',
+              'AngularJS',
+              'C/C++',
+              'Java',
+              'And more!',
+            ]}
+            size={5}
+            breakpoint="lg"
+          />
         </p>
         <div className="z-20 mt-4 flex items-center">
           <img

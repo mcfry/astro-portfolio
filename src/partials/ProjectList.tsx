@@ -93,14 +93,14 @@ const ProjectList = () => {
   ];
 
   return (
-    <section className="flex flex-col items-center justify-center pb-20">
-      <span className="w-6/12 p-2 text-3xl font-bold">
+    <section className="flex flex-col items-center justify-center pb-20 pt-4">
+      <span className="w-10/12 p-2 text-3xl font-bold md:w-9/12 lg:w-10/12 xl:w-8/12 2xl:w-7/12">
         Recent{' '}
         <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
           Projects
         </span>
       </span>
-      <div className="z-10 flex w-6/12 flex-col gap-6">
+      <div className="z-10 flex w-10/12 flex-col gap-6 md:w-9/12 lg:w-10/12 xl:w-8/12 2xl:w-7/12">
         {projects.map((project) => {
           return (
             <div key={project.name} className="block">
@@ -111,16 +111,16 @@ const ProjectList = () => {
                       new
                     </span>
                   )}
-                  <div className="card glass card-side h-48 w-full rounded-md shadow-xl">
-                    <figure>
+                  <div className="card glass card-side h-fit w-full flex-col rounded-md shadow-xl lg:h-48 lg:flex-row">
+                    <figure className="lg:w-[20%]">
                       <img
-                        className="h-40 w-40 object-scale-down p-4"
+                        className="object-scale-down px-4 pt-4 lg:p-4"
                         src={project.imgSrc}
                         alt={project.imgAlt}
                       />
                     </figure>
-                    <div className="card-body">
-                      <span className="w-[40rem]">
+                    <div className="card-body p-4 lg:w-[80%]">
+                      <span>
                         <h2 className="card-title mb-1 hover:text-cyan-400">
                           {project.name}
                         </h2>
@@ -133,7 +133,7 @@ const ProjectList = () => {
                           </span>
                         ))}
                       </span>
-                      <p className="w-[40rem] pt-2 text-gray-200">
+                      <p className="w-fit pt-2 text-gray-200">
                         {project.description}
                       </p>
                     </div>

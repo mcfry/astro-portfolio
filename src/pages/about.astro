@@ -2,6 +2,8 @@
 import Base from '@/templates/Base.astro';
 import { AppConfig } from '@/utils/AppConfig';
 
+import TechStack from '@/partials/TechStack';
+
 const { title } = AppConfig;
 const { description } = AppConfig;
 ---
@@ -9,50 +11,56 @@ const { description } = AppConfig;
 <Base head={{ title, description }}>
   <section class='flex flex-col items-center justify-center p-20'>
     <div class='flex flex-col justify-center items-center py-6'>
-      <p class="font-semibold">Education, Pennsylvania State University:</p>
-      <ul class="marker:text-white list-disc space-x-6">
+      <p class="font-semibold text-center">Education, Pennsylvania State University:</p>
+      <ul class="marker:text-white list-disc space-x-6 text-center pt-2">
         <li>B.S. in Computer Science & Minor in Mathematics</li>
       </ul>
     </div>
 
     <div class='flex flex-col justify-center items-center py-6'>
-      <p class="font-semibold">I'm a Full-stack Web Developer with experience in:</p>
-      <ul class="marker:text-white inline-flex list-disc space-x-6">
-        <li>React</li>
-        <li>Ruby on Rails</li>
-        <li>Python</li>
-        <li>GraphQL</li>
-        <li>Express</li>
-        <li>MySQL</li>
-        <li>PostgreSQL</li>
-      </ul>
-      <br />
-      <ul class="marker:text-white inline-flex list-disc space-x-6">
-        <li>NoSQL (MongoDB)</li>
-        <li>Typescript</li>
-        <li>MobX</li>
-        <li>Redux</li>
-        <li>Zustand</li>
-        <li>CSS/SCSS</li>
-        <li>HTML</li>
-      </ul>
+      <p class="font-semibold text-center">I'm a Full-stack Web Developer with experience in:</p>
+      <TechStack
+        techStack={[
+          'React',
+          'Ruby on Rails',
+          'Python',
+          'GraphQL',
+          'Express',
+          'MySQL',
+          'PostgreSQL',
+          'NoSQL',
+          'Typescript',
+          'MobX',
+          'Redux',
+          'Zustand',
+          'CSS/SCSS',
+          'HTML',
+        ]}
+        size={5}
+        breakpoint='only-m'
+      />
     </div>
 
     <div class="flex flex-col justify-center items-center py-6">
-      <p class="font-semibold">I've also worked with:</p>
-      <ul class="marker:text-white inline-flex list-disc space-x-6">
-        <li>Django</li>
-        <li>Flask</li>
-        <li>jQuery</li>
-        <li>Firebase</li>
-        <li>AWS</li>
-        <li>D3.js</li>
-        <li>Flow.js</li>
-        <li>AngularJS 1.0</li>
-        <li>C/C++</li>
-        <li>Java</li>
-        <li>And more!</li>
-      </ul>
+      <p class="font-semibold text-center">I've also worked with:</p>
+      <TechStack
+        techStack={[
+          'Django',
+          'Flask',
+          'jQuery',
+          'Firebase',
+          'AWS',
+          'Electron',
+          'D3.js',
+          'Flow.js',
+          'AngularJS',
+          'C/C++',
+          'Java',
+          'And more!',
+        ]}
+        size={5}
+        breakpoint="only-m"
+      />
     </div>
 
     <div class='z-20 flex items-center pt-10'>
