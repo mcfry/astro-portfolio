@@ -56,20 +56,17 @@ const TechStack = ({ techStack, size, breakpoint }: TechStackProps) => {
     <>
       {/* Tablet+ */}
       <div className={`hidden${getBpp(breakpoint)}`}>
-        {getChunks(techStack, size).map((chunk, index) => (
-          <>
-            <ul
-              key={index}
-              className="inline-flex w-full list-disc flex-wrap marker:text-white"
-            >
-              {chunk.map((item) => (
-                <li key={item} className="ml-6">
+        {getChunks(techStack, size).map((chunk, i) => (
+          <div key={i}>
+            <ul className="inline-flex w-full list-disc flex-wrap marker:text-white">
+              {chunk.map((item, j) => (
+                <li key={`${item}_${j}`} className="ml-6">
                   {item}
                 </li>
               ))}
             </ul>
             <br />
-          </>
+          </div>
         ))}
       </div>
 
