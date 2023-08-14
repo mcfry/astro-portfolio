@@ -1,3 +1,6 @@
+import { Project } from '@/partials/Project';
+import { Reveal } from '@/partials/Reveal';
+
 const ProjectList = () => {
   const projects = [
     {
@@ -93,55 +96,20 @@ const ProjectList = () => {
   ];
 
   return (
-    <section className="flex flex-col items-center justify-center pb-20 pt-4">
+    <section className="flex flex-col items-center justify-center pb-60 pt-4">
       <span className="w-10/12 p-2 text-3xl font-bold md:w-9/12 lg:w-10/12 xl:w-8/12 2xl:w-7/12">
-        Recent{' '}
-        <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-          Projects
-        </span>
+        <Reveal>
+          <span>
+            Recent{' '}
+            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              Projects
+            </span>
+          </span>
+        </Reveal>
       </span>
       <div className="z-10 flex w-10/12 flex-col gap-6 md:w-9/12 lg:w-10/12 xl:w-8/12 2xl:w-7/12">
         {projects.map((project) => {
-          return (
-            <div key={project.name} className="block">
-              <a href={project.link}>
-                <div className="indicator w-full">
-                  {project.isNew && (
-                    <span className="badge indicator-item badge-primary rounded-none">
-                      new
-                    </span>
-                  )}
-                  <div className="card glass card-side h-fit w-full flex-col rounded-md shadow-xl lg:h-48 lg:flex-row">
-                    <figure className="lg:w-[20%]">
-                      <img
-                        className="object-scale-down px-4 pt-4 lg:p-4"
-                        src={project.imgSrc}
-                        alt={project.imgAlt}
-                      />
-                    </figure>
-                    <div className="card-body p-4 lg:w-[80%]">
-                      <span>
-                        <h2 className="card-title mb-1 hover:text-cyan-400">
-                          {project.name}
-                        </h2>
-                        {project.techStack.map((tech) => (
-                          <span
-                            key={tech[0]}
-                            className={`badge mr-2 border-none p-2 font-semibold text-white ${tech[1]}`}
-                          >
-                            {tech[0]}
-                          </span>
-                        ))}
-                      </span>
-                      <p className="w-fit pt-2 text-gray-200">
-                        {project.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-          );
+          return <Project key={project.name} project={project} />;
         })}
       </div>
     </section>

@@ -3,26 +3,13 @@ import { Hero } from '@/partials/Hero';
 import { ProjectList } from '@/partials/ProjectList';
 import Base from '@/templates/Base.astro';
 import { AppConfig } from '@/utils/AppConfig';
-// import { sortByDate } from '@/utils/Posts';
-
-// interface IFrontmatter {
-//   title: string;
-//   description: string;
-//   pubDate: string;
-//   imgSrc: string;
-//   imgAlt: string;
-// }
-
-// const allPosts = await Astro.glob<IFrontmatter>('./posts/*.md');
-// const sortedPosts = sortByDate(allPosts);
-// const lastThreePosts = sortedPosts.slice(0, 3);
 
 const { title } = AppConfig;
 const { description } = AppConfig;
 ---
 
-<!-- <RecentPosts postList={lastThreePosts} /> -->
+<!-- TODO: better partial hydration -->
 <Base head={{ title, description }}>
-  <Hero />
-  <ProjectList />
+  <Hero client:load />
+  <ProjectList client:load />
 </Base>
