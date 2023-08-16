@@ -7,9 +7,8 @@ const Hero = () => (
       <Reveal>
         <img
           className="h-[24rem] w-[24rem]"
-          src="/assets/images/p2.png"
-          alt="Avatar image"
-          loading="lazy"
+          src="/assets/images/p2_small.WebP"
+          alt="Programmer at Desk"
         />
       </Reveal>
       <div className="flex w-full flex-col items-center md:w-fit md:pl-8 lg:block">
@@ -22,7 +21,7 @@ const Hero = () => (
           </h1>
         </Reveal>
         <div className="py-3 leading-snug">
-          <Reveal>
+          <Reveal width="100%">
             <p className="text-center font-semibold lg:text-left">
               I'm a Full-stack Web Developer with experience in:
             </p>
@@ -51,7 +50,7 @@ const Hero = () => (
           </Reveal>
         </div>
         <div className="py-3">
-          <Reveal>
+          <Reveal width="100%">
             <p className="text-center font-semibold lg:text-left">
               I've also worked with:
             </p>
@@ -82,6 +81,7 @@ const Hero = () => (
             <img
               className="h-10 w-10"
               src="/assets/images/icons8-github-512.png"
+              alt="Github Icon"
             />
             <div className="pl-1 font-semibold hover:text-fuchsia-500">
               <a href="https://github.com/mcfry">Mcfry</a>

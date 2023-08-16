@@ -8,6 +8,8 @@ type ProjectProps = {
     isNew: boolean;
     link: string;
     imgSrc: string;
+    imgSrcMed: string;
+    imgSrcBig: string;
     imgAlt: string;
   };
 };
@@ -21,12 +23,14 @@ const Project = ({ project }: ProjectProps) => {
             new
           </span>
         )}
-        <Reveal>
+        <Reveal width="100%">
           <div className="card glass card-side h-fit w-full flex-col rounded-md shadow-xl lg:h-48 lg:flex-row">
             <figure className="lg:w-[20%]">
               <img
-                className="object-scale-down px-4 pt-4 lg:p-4"
+                className="h-full w-full px-4 pt-4 lg:h-48 lg:w-48 lg:object-scale-down lg:p-4"
                 src={project.imgSrc}
+                srcSet={`${project.imgSrcMed} 450w, ${project.imgSrcBig} 1024w, ${project.imgSrc} 1280w`}
+                sizes="(max-width: 450px) 250px, (max-width: 1024px) 1024px, 1280px"
                 alt={project.imgAlt}
               />
             </figure>
