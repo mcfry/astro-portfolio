@@ -108,7 +108,7 @@ const ProjectList = () => {
 
   return (
     <section className="flex flex-col items-center justify-center pb-40 pt-4">
-      <span className="w-10/12 p-2 text-3xl font-bold md:w-9/12 lg:w-10/12 xl:w-8/12 2xl:w-7/12">
+      <span className="w-10/12 p-2 text-3xl font-bold md:w-9/12 lg:w-10/12 xl:w-8/12 2xl:w-7/12 5xl:w-6/12 10xl:w-4/12">
         <Reveal>
           <span>
             Recent{' '}
@@ -118,7 +118,7 @@ const ProjectList = () => {
           </span>
         </Reveal>
       </span>
-      <div className="z-10 flex w-10/12 flex-col gap-6 md:w-9/12 lg:w-10/12 xl:w-8/12 2xl:w-7/12">
+      <div className="z-10 flex w-10/12 flex-col gap-6 md:w-9/12 lg:w-10/12 xl:w-8/12 2xl:w-7/12 5xl:w-6/12 10xl:w-4/12">
         {projects.map((project) => {
           return <Project key={project.name} project={project} />;
         })}
