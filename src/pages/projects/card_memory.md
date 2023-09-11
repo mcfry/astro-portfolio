@@ -4,7 +4,7 @@ title: Card Memory
 description: 'An application to guide and assist the task of memorizing a deck of cards using the PAO mnemonic system.' 
 pubDate: 2020-01-01T00:00:00Z
 imgSrc: 'https://i.imgur.com/U6Yzbub.gif'
-imgAlt: 'Image post 2'
+imgAlt: 'Card Memory Gif'
 ---
 
 This application was built to fast track the ability to memorize a deck of cards using the PAO mnemonic system.

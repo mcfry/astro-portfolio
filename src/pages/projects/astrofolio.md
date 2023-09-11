@@ -4,7 +4,7 @@ title: Astrofolio
 description: Project porfolio built with Astro. 
 pubDate: 2023-07-20T00:00:00Z
 imgSrc: '/assets/images/astrofolio_screen1.png'
-imgAlt: 'Image post 2'
+imgAlt: 'Astro Portfolio Gif'
 ---
 
 Among the many technologies at my disposal to make a portfolio, Astro called to the core Rails developer in me with its alluring Island Architecture. It reminded me of my early days in my web development journey, when we would load complex front-end logic into specific views based on the task. At that time, jQuery was the primary driver of front-end logic, and React had not yet emerged. But jQuery wasn't enough for complicated logic without having to refresh the page. 
